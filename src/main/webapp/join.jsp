@@ -1,3 +1,5 @@
+<%@page import="java.sql.*"%>
+<%@page import="DBPKG.Util"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,6 +11,25 @@
 <body>						<!-- src : 불러올 파일명 -->
 <script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp" />
+
+<!-- db 연동 / 자바 코드 작성 -->
+<%
+Connection conn = null;
+Statement stmt = null;
+String custno ="";
+
+try{ 
+	conn = Util.getConnection(); //DB 연결
+	stmt = conn.createStatement(); // sql 실행하기 위한 변수 생성
+	String sql ="select max(custno)+1 custno from member_tbl_02"; //sql문 담는 변수
+	ResultSet rs = stmt.executeQuery(sql); // stmt 통해서 sql 실행 결과 
+	rs.next(); // 저장된 값 불러오기 (1개의 결과물 출력)
+	custno = rs.getString("custno"); // 문자열로 custno 컬럼값을 변환해 custno 변수에 담기
+}
+catch(Exception e){	// 연동 실패시 에러를 단계별로 메세지 출력하겠다는 뜻
+	e.printStackTrace();
+}
+%>
 
 <section style="position:fixed; top:60px; width:100%; height:100%;
 background-color:lightgray;">
@@ -24,7 +45,7 @@ justify-content: center; text-align:center">
 
 <tr> <!-- 행 (가로)-->
 	<td>회원번호(자동발생)</td><!-- 열 (세로)-->
-	<td><input type="text" name="custno" readonly></td>
+	<td><input type="text" name="custno"  value="<%=custno%>" readonly></td>
 </tr>
 <tr> 
 	<td>회원성명</td>
