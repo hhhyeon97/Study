@@ -14,6 +14,10 @@
 
 <!-- db 연동 / 자바 코드 작성 -->
 <%
+
+request.setCharacterEncoding("UTF-8");
+
+
 Connection conn = null;
 Statement stmt = null;
 String custno ="";
@@ -38,8 +42,10 @@ background-color:lightgray;">
 
 <!--폼태그에 있어 name은 폼값을 넘기기 위해서 사용된다. -->
 						<!-- 테이블 정렬 / 수직 정렬 / 수평 정렬 -->	
-<form name="frm" style="display:flex; align-items: center;
+<form method = "post" action="action.jsp" name="frm" style="display:flex; align-items: center;
 justify-content: center; text-align:center">
+<input type ="hidden" name="mode" value="insert">
+
 
 <table border="1">
 

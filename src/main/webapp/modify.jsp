@@ -16,13 +16,17 @@
 background-color:lightgray;">
 <h3 style="text-align: center"> <b>홈쇼핑 회원 정보 수정</b></h3><br>
 <!-- form : 표 설정 -->
-<form name="frm" style="display:flex; align-items: center;
+<form method="post" action="action.jsp" name="frm" style="display:flex; align-items: center;
 justify-content: center; text-align:center">
+<input type ="hidden" name="mode" value="modify">
 
 <table border="1"> <!--  선 두께-->
 
 <!-- db 연결 -->
 <%
+
+request.setCharacterEncoding("UTF-8");
+
 Connection conn = null;
 Statement stmt = null;
 String mod_custno = request.getParameter("mod_custno"); // 외부 파일 결과 받아올 때
@@ -50,7 +54,7 @@ try{
 	grade=rs.getString("grade");
 	city=rs.getString("city"); 
 	
-	SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-mm-dd");
+	SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd");
 	joindateStr = transFormat.format(joindate);
 }
 catch(Exception e){
@@ -63,7 +67,7 @@ System.out.println("mod_custno: " + mod_custno);
 %>
 <tr>
 	<td>회원번호</td>
-	<td><input type="text" name="custno" value="<%=mod_custno %>" ></td>
+	<td><input type="text" name="custno" value="<%=mod_custno %>" readonly></td>
 </tr>
 <tr>
 	<td>회원성명</td>
