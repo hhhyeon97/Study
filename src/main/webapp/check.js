@@ -43,3 +43,6 @@ function res(){
 	document.frm.reset();
 }
 
+function search(){
+	document.frm2.submit();
+}
