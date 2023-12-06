@@ -16,10 +16,10 @@ text-align:center; font-szie:20px; color:white">
 <nav style="position:fixed; top:40px; left:0px;
 width:100%; height:30px;
 line-height:30px; background-color:lightgray; color:white; padding-left:20px;">
-<a href="slist.jsp">강사조회</a>&nbsp;&nbsp;
+<a href="tlist.jsp">강사조회</a>&nbsp;&nbsp;
 <a href="insert.jsp">수강신청</a>&nbsp;&nbsp;
-<a href="jumlist.jsp">회원정보조회</a>&nbsp;&nbsp;
-<a href="search.jsp">강사매출현황</a>&nbsp;&nbsp;
+<a href="mlist.jsp">회원정보조회</a>&nbsp;&nbsp;
+<a href="salary.jsp">강사매출현황</a>&nbsp;&nbsp;
 <a href="index.jsp">홈으로</a>
 </nav>
 </body>
