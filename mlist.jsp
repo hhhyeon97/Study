@@ -32,7 +32,7 @@ request.setCharacterEncoding("UTF-8");
 
 try{
 	String sql="select resist_month, cl.c_no, c_name, class_name, class_area, tuition, grade from tbl_teacher_202201 te, tbl_member_202201 me, tbl_class_202201 cl "+
-	"where te.teacher_code=cl.teacher_code and me.c_no=cl.c_no";
+	"where te.teacher_code=cl.teacher_code and me.c_no=cl.c_no order by resist_month";
 	
 	PreparedStatement pstmt = con.prepareStatement(sql); //sql생성
 	ResultSet rs = pstmt.executeQuery(); //결과 집합 생성 

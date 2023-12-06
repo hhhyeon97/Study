@@ -12,7 +12,7 @@
 <jsp:include page="header.jsp" />
 <section>
 <h2>수강신청</h2>
-<form name="frm">
+<form action="action.jsp" name="frm">
 <table border="1">
 	<tr>
 		<td style="text-align:center;">수강월</td>
@@ -39,11 +39,11 @@
 	<tr>
 		<td style="text-align:center;">강의장소</td>
 		<td>
-		<input type="radio" name="class_area" value="1">강남본원
-		<input type="radio" name="class_area" value="2">서초본원
-		<input type="radio" name="class_area" value="3">마포본원
-		<input type="radio" name="class_area" value="4">종로본원
-		<input type="radio" name="class_area" value="5">노원본원
+		<input type="radio" name="class_area" value="강남본원">강남본원
+		<input type="radio" name="class_area" value="서초본원">서초본원
+		<input type="radio" name="class_area" value="마포본원">마포본원
+		<input type="radio" name="class_area" value="종로본원">종로본원
+		<input type="radio" name="class_area" value="노원본원">노원본원
 		</td>
 	</tr>
 	
