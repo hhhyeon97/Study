@@ -16,7 +16,19 @@ section{
 	background-color:#8ca5d1;
 }
 
+form{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+}
 
+table{
+	/*border-collapse: collapse;*/
+}
+table td{
+	width:150px;
+}
 a{
 	color:black;
 }
