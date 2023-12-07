@@ -7,14 +7,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>후보자 등수</title>
+<style>
+table td{
+	width:100px;
+}
+</style>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 <section style="position:fixed; top:70px;
 left:0px; width:100%; height:100%;
-background-color:lightgray;">
-<h2>후보자등수</h2>
+background-color:#98b5d4;">
+<h2 style="text-align:center;">후보자등수</h2>
 <form style="display:flex; align-items: center; justify-content: center;">
 
 <table border="1" style="border-collapse: collapse; text-align:center;">
@@ -39,7 +44,6 @@ try{
 	
 	while(rs.next()){
 		
-		//int vtotal = rs.getInt("vtotal");
 		
 %>
 

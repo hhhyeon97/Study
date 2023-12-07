@@ -34,6 +34,7 @@ top:70px; left:0px; width:100%; height:100%; ">
 				<tr>
 			<th>투표번호</th>
 			<td><select name="m_no">
+			<option value=""></option>
 			<option value="1">1김후보</option>
 			<option value="2">2이후보</option>
 			<option value="3">3박후보</option>

@@ -1,4 +1,4 @@
-<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.*"%>
 <%@ include file="db.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,6 +24,7 @@ pstmt.setString(3, m_no);
 pstmt.setString(4, v_time);
 pstmt.setString(5, v_area);
 pstmt.setString(6, v_confirm);
+
 pstmt.executeUpdate();
 
 }
