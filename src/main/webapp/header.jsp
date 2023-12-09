@@ -25,7 +25,7 @@ line-height:30px; background-color:lightgray; color:white; padding-left:20px;">
 
 <a href="insert.jsp">근무좌석예약</a>&nbsp;&nbsp;
 <a href="list.jsp">좌석예약조회</a>&nbsp;&nbsp;
-<a href="">근무일수집계</a>&nbsp;&nbsp;
+<a href="count.jsp">근무일수집계</a>&nbsp;&nbsp;
 <a href="index.jsp">홈으로</a>
 
 
