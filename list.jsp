@@ -100,8 +100,8 @@ try{
 		<td><%=rs.getString(4)%></td>
 		<td><%=a%></td>
 		<td><%=start%></td>
-		<td><%=end%></td>
-		<td>삭제</td>
+		<td><%=end%></td>		<!-- 주소창은 다 붙여써야 함 !!  -->
+		<td><a href="action.jsp?id=<%=rs.getString(1)%>&mode=delete">삭제</a></td>
 	</tr>
 	
 <%				

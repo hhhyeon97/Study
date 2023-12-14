@@ -38,6 +38,8 @@ table {
 <h2><b>교과목 추가</b></h2>
 
 <form method="post" action="action.jsp" name="frm">
+<input type="hidden" name="mode" value="insert">
+
 <table border="1">
 
 <tr>

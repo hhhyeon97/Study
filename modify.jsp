@@ -40,7 +40,8 @@ table {
 
 <h2><b>교과목목록 조회/수정</b></h2>
 
-<form name="frm">
+<form method="post" action="action.jsp" name="frm">
+<input type="hidden" name="mode" value="modify">
 <table border="1">
 
 <%
