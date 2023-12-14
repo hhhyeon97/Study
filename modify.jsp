@@ -38,7 +38,7 @@ table {
 
 <section>
 
-<h2><b>교과목목록 조회/수정</b></h2>
+<h2><b>교과목목록 수정</b></h2>
 
 <form method="post" action="action.jsp" name="frm">
 <input type="hidden" name="mode" value="modify">
@@ -137,5 +137,6 @@ catch(Exception e){
 </table>
 </form>
 </section>
+<jsp:include page="footer.jsp" />
 </body>
 </html>
