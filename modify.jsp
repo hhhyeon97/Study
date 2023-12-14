@@ -33,13 +33,14 @@ table {
 </style>
 </head>
 <body>
+<script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp" />
 
 <section>
 
 <h2><b>교과목목록 조회/수정</b></h2>
 
-<form>
+<form name="frm">
 <table border="1">
 
 <%
@@ -57,6 +58,15 @@ try{
 	
 	
 	String lecturer = rs.getString(4);
+	String week = rs.getString(5);
+	String start_hour = rs.getString(6);
+	while(start_hour.length()<4){
+		start_hour = "0"+start_hour;
+	}
+	String end_hour = rs.getString(6);
+	while(end_hour.length()<4){
+		end_hour = "0"+end_hour;
+	}
 	%>
 	
 	<tr>
@@ -89,9 +99,33 @@ try{
 	</tr>		
 
 	<tr>
-	<td>학점</td>
-	<td><input type="text" name="credit" style="width:100%" value="<%=rs.getString(3)%>"></td>
+	<td>요일</td>
+	<td>
+	<input type="radio" name="week" value="1" <% if(week.equals("1")) out.println("checked"); %>>월	
+	<input type="radio" name="week" value="2" <% if(week.equals("2")) out.println("checked"); %>>화
+	<input type="radio" name="week" value="3" <% if(week.equals("3")) out.println("checked"); %>>수	
+	<input type="radio" name="week" value="4" <% if(week.equals("4")) out.println("checked"); %>>목	
+	<input type="radio" name="week" value="5" <% if(week.equals("5")) out.println("checked"); %>>금	
+	</td>
 	</tr>		
+	
+	<tr>
+	<td>시작시간</td>
+	<td><input type="text" name="start_hour" style="width:100%" value="<%=start_hour%>"></td>
+	</tr>
+
+	<tr>
+	<td>종료시간</td>
+	<td><input type="text" name="end_hour" style="width:100%" value="<%=end_hour%>"></td>
+	</tr>	
+	
+	
+	<tr>
+		<td colspan="2">
+			<input type="button" value="수정" onclick="modify()">
+			<input type="button" value="취소" onclick="res()">
+		</td>
+	</tr>	
 	
 	<%
 }
