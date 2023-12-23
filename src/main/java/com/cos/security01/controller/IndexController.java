@@ -15,27 +15,28 @@ public class IndexController {
 	}
 	
 	@GetMapping("/user")
-	public String user(){
+	public @ResponseBody String user(){
 	return "user";
 	}
 
 	@GetMapping("/admin")
-	public String admin(){
+	public @ResponseBody String admin(){
 	return "admin";
 	}
 	
 	@GetMapping("/manager")
-	public String manager(){
+	public @ResponseBody String manager(){
 	return "manager";
 	}
 	
+	// 스프링 시큐리티가 해당주소를 낚아 채버림! - > SecurityConfig 파일 생성 후 작동 안 함.
 	@GetMapping("/login")
-	public String login(){
+	public @ResponseBody String login(){
 	return "login";
 	}
 	
 	@GetMapping("/join")
-	public String join(){
+	public @ResponseBody String join(){
 	return "join";
 	}
 	
