@@ -22,8 +22,8 @@ public class SecurityConfig{	// 스프링 시큐리티 필터 설정
         http.csrf().disable();
         http.authorizeHttpRequests()
                 .requestMatchers("/user/**").authenticated()  // 인증만 되면 들어갈 수 있는 주소 ! 
-                .requestMatchers("/manager/**"). hasAnyRole("hasAnyRole('ROLE_MANAGER','ROLE_ADMIN')")
-                .requestMatchers("/admin/**").hasAnyRole("hasRole('ROLE_ADMIN')")
+                .requestMatchers("/manager/**").hasAnyRole("ADMIN", "MANAGER")
+                .requestMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().permitAll()
         		.and()
         		.formLogin()
