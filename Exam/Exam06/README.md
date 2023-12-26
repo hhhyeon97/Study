@@ -1,16 +1,18 @@
 
 ### 1. index 화면
 
-![화면 캡처 2023-12-13 030705](https://github.com/hhhyeon97/Exam06/assets/148893126/2c4310b8-b270-4548-b011-8ba3335e411a)
+![화면 캡처 2023-12-13 030705](https://github.com/hhhyeon97/Study/assets/148893126/dc2283ba-580c-439d-ab3c-0a914c68e26b)
+
 
 ### 2. 교과목 추가
 
-![화면 캡처 2023-12-14 223433](https://github.com/hhhyeon97/Exam06/assets/148893126/d2c74278-2c6b-4b53-a529-96c270636f8b)
+![화면 캡처 2023-12-14 223433](https://github.com/hhhyeon97/Study/assets/148893126/af4021b5-edf6-4760-819f-5b3fe97c25a1)
+
 
 ### 3. 목록 조회/삭제 가능 
 
-![화면 캡처 2023-12-14 223417](https://github.com/hhhyeon97/Exam06/assets/148893126/d9a893fa-9132-48b3-b1e6-0e39040d065b)
+![화면 캡처 2023-12-14 223417](https://github.com/hhhyeon97/Study/assets/148893126/ef3b2087-7948-4275-b4c4-0b8f948a025a)
 
 ### 4. 수정
 
-![화면 캡처 2023-12-14 223631](https://github.com/hhhyeon97/Exam06/assets/148893126/6b312027-69c8-4c31-82b2-0a650b97c66a)
+![화면 캡처 2023-12-14 223631](https://github.com/hhhyeon97/Study/assets/148893126/10cb0d2a-da5e-4226-90b7-f0c15c8924ee)
