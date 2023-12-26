@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8080
   servlet:
     context-path: /
     encoding:
@@ -21,3 +21,14 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
+    
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1021902287349-diml3sfr4bqf3roee8ns4ijqj55fu3np.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+            - email
+            - profile
