@@ -20,10 +20,13 @@ public class SecurityConfig{	// 스프링 시큐리티 필터 설정
 	private PrincipalOauth2UserService principalOauth2UserService;
 	
 	// 해당 메서드의 리턴되는 오브젝트를 IOC로 등록해준다.
+	/*
 	@Bean
 	public BCryptPasswordEncoder encodePwd() {
 		return new BCryptPasswordEncoder();
 	}
+	*/
+	
 	
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

@@ -23,12 +23,21 @@ import lombok.Data;
 @Data
 public class PrincipalDetails implements UserDetails, OAuth2User{
 	
-	private User user; // 콤포지션
-
+	private User user; // 콤포지션    사용자정보 
 	
+	private Map<String, Object> attributes; // OAuth2에서 받아온 추가 속성
+	
+	// 일반 로그인할 때 사용 
 	public PrincipalDetails(User user) {
 		this.user=user;
 	}
+	
+	// OAuth 로그인 할 때 사용하는 생성자 
+	public PrincipalDetails(User user,Map<String, Object> attributes) {
+		this.user=user;
+		this.attributes=attributes;
+	}
+	
 	// 해당 User의 권한을 리턴하는 곳 !
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -76,12 +85,10 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	}
 	@Override
 	public Map<String, Object> getAttributes() {
-		// TODO Auto-generated method stub
-		return null;
+		return attributes;
 	}
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
