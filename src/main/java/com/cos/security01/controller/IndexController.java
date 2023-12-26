@@ -39,11 +39,12 @@ public class IndexController {
 	
 	@GetMapping("/test/oauth/login")
 	public @ResponseBody String testOAuthLogin(
-			Authentication authentication) { // DI(의존성 주입)
+			Authentication authentication,
+			@AuthenticationPrincipal OAuth2User oauth) { // DI(의존성 주입)
 		System.out.println("/test/oauth/login =================================");
 		OAuth2User oauth2User = (OAuth2User)authentication.getPrincipal(); // 다운캐스팅 / 리턴 타입이 오브젝트 
 		System.out.println("authentication : "+oauth2User.getAttributes());
-		
+		System.out.println("oauth2User : "+oauth.getAttributes());
 		return "OAuth 세션 정보 확인하기";
 	}
 	
