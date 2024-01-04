@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* notice.jsp ui 상단 */
+/* 서브 메인 이미지 */
+
+#sub_img_center{
+	width:971px; height:179px;
+	background-image:url(../images/center/sub_back.png);
+	background-repeat:no-repeat;
+	background-position: left top;
+}
+
+#notice{
+	width:670px; border-collapse: collapse; /* 표 테이블 테두리 선을 분리하지 않고 합쳐서 한 줄로 그린다. */
+}
+
+#notice th{
+	height:20px; text-transform: capitalize; /* 영문 첫글자를 대문자로 변경 */
+	font-size:14px; font-weight: bold; /* 글자를 진하게 */
+	padding:5px; /* 상하좌우 안 여백을 동시에 5픽셀로 지정*/
+	background-image:url(../images/center/t_back.jpg);
+	background-repeat:repeat-x; /* x축 수평으로 반복 */
+	background-position: center top;  /*이거 확인해보면 약간 그라데이션처럼 보임 ... position 부분 다시 알아보기!*/
+	color:#fff;
+}
+
+#notice td{
+	text-align: center;
+	padding : 6px 0px;	/*밑줄 선 두께*/
+	border-bottom-style:dotted; /*밑줄 선 스타일 */
+	border-bottom-color:#999; /*밑줄 선 색 지정*/
+}
+
+#notice td.left{
+	text-align:left; padding-left:14px; /* 왼쪽 안 여백을 주어 약간의 들여쓰기 느낌 ...*/
+}
+
+#notice .tno{
+	width: 50px;
+	border-top-left-radius:5px; /* 테두리 좌상단을 둥글게 */
+	border-bottom-left-radius:5px; /* 테두리 좌하단을 둥글게*/ 
+}
+
+#notice .ttitle{
+	width:200x;  letter-spacing: 0.7em; /* 글자간 즉 자간 간격 조절 */
+	
+}
+#notice .twrite{
+	width:100px;
+}
+#notice .tdate{
+	width:50px;
+}
+#notice .tread{
+	width:50px;
+	border-top-right-radius: 5px; /* 테두리 우상단을 둥글게 */
+	border-bottom-right-radius: 5px; /* 우하단을 둥글게 */
+}
+
+#table_search{
+	float:right;
+	margin:15px 5px 10px 0px;
+}
+
+#table_search .input_box{
+	width:200px; height:20px; border:1px solid #97aaaa;
+	border-radius:10px; background-color:#fefded;
+}
+#table_search .btn{
+	width:90px; height:23px;
+	margin: 0px 0px 0px 5px; padding:2px;
+	border:1px solid #999; color:#fff;
+	border-radius:10px;
+	background-image:url(../images/center/t_back.jpg);
+	background-repeat: repeat-x;
+	background-position:center center;
+}
+
+#page_control{ /*div태그는 블록수준태그라서 너비를 따로 안 주면 가로줄 전체를 차지함 그래서 여기서 margin을 줘도 이동할 공간이 없어서 변화를 줄 수 없음 ! 
+margin-left:auto 이거 쓰고 싶으면...jsp가서 이 부분 div에 너비를 주고 와서 다시 적용해보기 ...!*/
+	text-align: center; margin-top:20px;
+}
+#page_control a{
+	text-decoration:none; padding:2px 5px; color:#333;
+	margin:0px 5px;
+}
+#page_control a:hover{
+	text-decoration:underline; font-weight:bold; color:#f90;
+}
+#notice tr:hover{
+	background-color:#eddb92;
+	cursor:pointer; cursor:hand; /*마우스 오버시 화살표 마우스 포인터를 손가락 모양으로 나오게 한다.*/
+}

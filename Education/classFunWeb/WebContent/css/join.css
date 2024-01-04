@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+/*서브 메인 이미지*/
+#sub_img_member{
+	width:971px; height:179px;
+	background-image:url(../images/member/sub_back.png);
+	background-repeat:no-repeat;
+	background-position: left top;
+}
+
+#join{
+	width:670px; margin:10px 0px 0px 0px;	
+}
+#join fieldset{
+	border:none; /* fieldset 그룹 경계선을사라지게 함 */
+	padding: 10px 0px 20px 5px;
+}
+#join legend{
+	font-size:20px; 
+	border-bottom: 1px dotted #666; /* 그룹 제목 밑줄선 두께, 점선, 선색 지정 */
+	width:600px; padding:8px 0px; /*상하 안 여백을 8픽셀, 좌우 안 여백을 0픽셀 */
+}
+#join label{
+	float:left; width:140px; margin: 5px 0px; /* 상하 바깥 여백은 5픽셀, 좌우 바깥 여백은 0픽셀 */
+} /*왼쪽에 있는 label만 맞추면 균형 깨짐.. 오른쪽에 위치한 input박스쪽도 값을 맞춰줘야 일정하게 들어감*/
+#join input{
+	margin: 5px 0px; /* label과 동일하게 상하 바깥 여백을 지정해야 ui가 안 깨짐 */
+	border:1px solid #999; /* 입력필드 테두리 선두께, 실선, 선색을 지정 */
+	background-color:#fcfdea; /* 입력 박스 배경색 지정 */
+}
+#join input.id{
+	width:100px; height:18px; /*입력박스 너비와 높이 지정 */
+}
+#join input.dub{
+	width:70px; height:20px; border-radius:8px; /*테두리를 둥글게 처리*/
+	border:none; /*테두리 제거*/
+	background-image:url(../images/member/dup.jpg);
+	background-repeat:repeat-x; /* 수평으로 x축에 반복*/
+	background-position:center center;
+	color:#fff; /* 16진수 색상코드를 줄여서 #fff로 표현 가능함. */
+	font-weight:bold;
+	margin-left:5px; /* 버튼과 입력박스 사이를 띄우려고 바깥 왼쪽 여백을 줌! */
+}
+
+/*ui 영역을 만들 때 큰 영역 먼저 div로 잡고 그 안에 작은 div 또 잡고 그 안에 또 작은 영역을 반복적으로 할 땐 class 활용하기! */
+#join .pass{
+	width: 150px; height:18px;
+}
+#join .nick{
+	width: 80px; height:18px;
+}
+#join .eamil{
+	width: 200px; height:18px;
+}
+#join .address{
+	width: 300px; height:18px;
+}
+#join .phone{
+	width: 180px; height:18px;
+}
+#buttons{
+	margin:20px 0px 0px 0px;
+}
+#buttons .submit, #buttons .cancel{
+	height:24px; width:75px; border: 1px solid #666;
+	border-radius:10px;
+	box-shadow:3px 3px 3px #ccc; /*그림자 효과*/
+	font-size:14px;
+}
+#buttons .submit{
+	background-image:url(../images/member/submit_back.jpg);
+	background-repeat:repeat-x;
+	background-position: center center;
+	color:#fff; margin: 0px 0px 0px 100px; 
+}
+#buttons .cancel{
+	background-image:url(../images/member/cancel_back.jpg);
+	background-repeat:repeat-x;
+	background-position: center center;
+	margin:0px 0px 0px 20px;
+}
+

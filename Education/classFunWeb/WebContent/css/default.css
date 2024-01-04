@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/* index.jsp 메인화면 ui 작업 */
+
+body{
+	background-color:#898989;	
+	margin:0px; /* 상하좌우 바깥여백 */
+	padding:0px; /* 상하좌우 안 여백 지정 */
+	font-size:0.7em;
+	line-height:1.2em;
+	color:#333; /* #333 16진수 색상코드는 #333333 축약 가능 */
+}
+
+#wrap{
+	
+	width:971px; text-align:left; /*글자 수평 왼쪽 정렬*/
+	margin:0px;
+	margin-left:auto; margin-right:auto; /* 블록수준 요소 태그에 너비를 지정한 후 수평 좌우 중앙 정렬 처리 */
+	background-image:url(../images/shadow.png);
+	background-repeat:repeat-y; /* y축 방향으로 반복 */
+	min-height:980px; /* 최소 높이 */
+}
+
+#logo{
+	float:left; /* 왼쪽 배치 */ width:265px;
+	margin:60px 0px 0px 40px; /* 시계 방향으로 바깥 위, 오른쪽, 아래쪽, 왼쪽 여백 지정 */
+	
+}
+
+nav{
+	width:600px; margin:70px 20px 0px 0px; float:right; 	/* 메뉴를 오른쪽에 배치 */
+}
+nav ul{
+	list-style:none; /* 목록앞 점 삭제 */
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px; font-weight:bold; /* 글자를 진하게 */
+	color:#333;
+}
+
+nav ul li {
+	float:left; /* 메뉴 수직 목록을 수평으로 배치  */
+	margin:0px 5px; /* 상하 바깥 여백을 0픽셀, 좌우 바깥여백은 5px */
+}
+
+nav a {
+	disply: block; height:20px; padding: 10px; text-decoration: none; /* 밑줄선 제거 */
+	color:#333;
+}
+
+nav a:hover{ /* 하이퍼링크 된 곳 마우스 오버시 css 효과 */
+	background-image:url(../images/blue.gif);
+	background-repeat: repeat-x; /* x축 수평으로 반복 */
+	background-position: bottom; /* 밑줄선으로 배경이미지가 x축으로 수평으로 반복하면서 표시 */
+	
+}
+#login{
+	float:right; margin:20px  64px 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px; word-spacing:5px; /* 단어 사이 간격 */
+}
+.clear{
+	clear:both; /* float속성을 제거해서 잘못된 ui 적용을 방지함 */
+}
+#login a{
+	text-decoration: none; color:#333;
+}
+
+#login a:hover{
+	color:#f90;  /* #ff9900을 축약 */
+}
+
+/* index.jsp 메인 이미지 */
+
+#main_img{
+	width:971px; height:308px;
+	background-image:url(../images/img_back.png);
+	background-repeat:no-repeat;
+	background-position: center top;
+}
+
+#main_img img{
+	
+	margin:9px 0px 0px 0px; 
+}
+
+/*메인 본문 ui*/
+
+#main_cont{
+	margin:5px 0px 5px 0px;
+}
+#solution{
+	border: 1px solid red; border-radius:10px; /* css3에서 추가된 속성으로 테두리를 둥글게 처리*/
+	width:910px; min-height:150px; background:#ebebeb; padding:10px;
+	margin-left:20px; /* 바깥 왼쪽 여백 지정 */
+}
+
+#hosting, #security, #payment{
+	float:left; /* 복수개의 div를 수직정렬 수평 처리 */
+	width:30%;
+	padding:10px;
+}
+
+#hosting h3, #security h3, #payment h3{
+	font-size:14px; font-weight:600; /* 글자 진하게 */ color: #333; margin:0px 0px 0px 80px;
+}
+#hosting p, #security p, #payment p{
+	font-size:12px; color:#333; margin:5px 0px 0px 80px; /* 시계 방향으로 바깥 위, 오른쪽, 아래쪽, 왼쪽 바깥 여백을 동시에 지정 */
+}
+
+#hosting{
+	background-image:url(../images/icon1.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	border-right:1px solid #ccc; /* 오른쪽 구분선 */
+}
+#security{
+	background-image:url(../images/icon2.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	border-right:1px solid #ccc; /* 오른쪽 구분선 */
+	margin-left:10px;
+}
+#payment{
+	background-image:url(../images/icon3.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	margin-left:10px;
+}
+
+#sec_news, #news_notice{
+	
+	width:420px; float:left; /*복수개의 div 수직정렬을 수평정렬로 배치*/
+	margin:15px 0px 0px 40px;
+	
+}
+
+#sec_news h3, #news_notice h3{
+	
+	font-size:14px; font-style:italic; /*기울임*/
+	width:420px; height:24px;
+	background-image:url(../images/h3_back.jpg);
+	background-repeat:no-repeat;
+	padding:5px 0px 0px 22px; /* 시계 방향으로 위,오른쪽,아래,왼쪽 안 여백을 동시에 지정 */
+}
+#sec_news .orange{
+	color:#f26522;
+}
+#news_notice .brown{
+	color:#a87132;
+}
+#sec_news dl{
+	
+	margin-left:6px; /*바깥 왼쪽 여백 지정 */	
+}
+#sec_news dd{
+	margin-left:0px; /*바깥 왼쪽 여백 없애서 dd태그의 특징인 들여쓰기를 제거한다! */
+	font-size:13px;
+	color:#333; 
+}
+#sec_news dt{
+	font-size:16px;
+	margin:5px 0px; /*상하 바깥 여백을 5픽셀, 좌우 바깥 여백을 0픽셀 지정 */
+	color:#f00;
+}
+#sec_news dt a{
+	text-decoration : none; color:#f00; 
+}
+#sec_news dt a:hover{
+	text-decoration:underline; color:#f90;
+}
+#sec_news dd a{
+	text-decoration:none; color:#333;
+}
+#sec_news dd a:hover{
+	text-decoration:underline; color:#f90;
+}
+
+#news_notice table{
+	width:420px; text-align: center;
+}
+
+#news_notice td{
+	border-bottom-width: 1px; /* 밑줄 점선 두께 */
+	border-bottom-style: dotted; /* 밑줄선 스타일을 점선으로 */
+	border-bottom-color: #999; /*밑줄선 색*/
+	padding : 6px 4px; /* 상하 안 여백을 6픽셀,좌우 안 여백을 4픽셀로 처리 */
+}
+
+#news_notice td.contxt{
+	background-image:url(../images/tr_back.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left:15px; /* 왼쪽 안 여백 지정 */
+	text-align:left; color:#333; 
+}
+#news_notice a{
+	text-decoration: none; color: #333;
+}
+#news_notice a:hover{
+	text-decoration: none; color: #f90;
+}
+
+/* index.jsp footer 하단 영역 ui */
+
+footer {
+	margin:50px 0px 0px 0px; height:80px;
+	background-image:url(../images/under_logo.gif);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+}
+footer hr{
+	width:900px;
+}
+
+#copy{
+	
+	width:450px; float:left; /*왼쪽에 배치*/
+	margin:20px 0px 0px 190px;
+}
+
+#social{
+	width:130px; float:right; /*오른쪽에 배치 */
+	margin:20px 20px 0px 0px;
+}
+
+#social img{
+	margin:0px 7px; /*상하 바깥 여백은 0px, 좌우 바깥 여백을 7픽셀 설정 */
+}
+

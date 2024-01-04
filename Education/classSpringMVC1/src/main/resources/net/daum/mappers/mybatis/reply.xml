@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Reply">
+
+	<!-- 댓글 저장  -->
+	<insert id ="reply_in" parameterType="reply">	<!-- parameterType은 전달인자 타입 속성이고 생략 가능함. -->
+		insert into tbl_reply(rno,bno,replyer,replytext,regdate) values(rno_seq.nextval,
+		#{bno},#{replyer},#{replytext}, sysdate)
+	</insert>
+	
+	<!-- 게시판 번호에 해당하는 댓글 목록 -->
+	<select id="reply_list" resultType="reply"> <!-- resultType은 반환타입 속성이고 생략 불가 -->
+	select * from tbl_reply where bno=#{bno} order by rno desc
+	</select>
+	
+	<!-- 댓글 수정 -->
+	<update id="reply_edit">
+	update tbl_reply set replytext=#{replytext},updatedate=sysdate where rno=#{rno} <!-- 댓글번호를 기준으로 수정할 것! -->
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="reply_del" parameterType="int">
+		delete from tbl_reply where rno=#{rno}
+	</delete>
+	
+	
+	<!-- 댓글 번호를 기준으로 게시판 번호값 구하기 -->
+	<select id="reply_bno" resultType="int" parameterType="int">
+		select bno from tbl_reply where rno=#{rno}
+	</select>
+	
+	
+	<!-- 위 id중에 reply_list만 반환타입이 있고 나머지 부분은 반환 타입 없는 void형이므로 parameterType생략하고 id만 작성해도 됨.
+	반환타입이 있는 id는 결과타입 필수 기입! -->
+</mapper>
