@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+	<h1 th:text="${vo}"></h1>
+	<hr>
+	
+	<div th:utext="${'<h2>' +vo.mid+'</h2>'}"></div>
+	<!--/*th:utext는 html태그를 웹상에 적용시킴 */-->
+	<div th:text="${'<h2>' +vo.mname+'</h2>'}"></div> 
+	<!--/* th:text는 <를 &lt;으로 인식하고, >를 &gt;으로 각각 인식해서 그대로 <>웹상에 출력되게 한다.*/-->
+		
+</body>
+
+
+</html>

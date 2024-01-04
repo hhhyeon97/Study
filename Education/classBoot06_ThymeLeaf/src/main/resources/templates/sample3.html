@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Thymeleaf 연습</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+
+	<table border="1">
+	<tr>
+		<th>회원 아이디</th> <th>회원이름</th> <th>가입날짜</th>
+	</tr>
+	
+	<tr th:each="member:${list}">
+		<td th:text="${member.mid}"></td>
+		<td th:text="${member.mname}"></td>
+		<td th:text="${#dates.format(member.regdate,'yyyy년 MM월 dd일')}"></td>
+		<!--/* 날짜 포맷타입 지정 */-->
+	</table>
+<hr>
+
+	<table border="1">
+	<tr>
+		<th>Count</th> <th>size</th> <th>홀수(Odd)/짝수(Even)</th> <th>회원아이디</th>
+		<th>회원이름</th> <th>가입날짜</th>
+	</tr>
+	
+	<tr th:each="member,count2: ${list}">
+		<th th:text="${count2.count}"></th> <!-- count는 1부터 시작하는 카운터 개수 -->
+		<th th:text="${count2.size}"></th> <!-- size는 목록 개수 -->
+		<th th:text="${count2.odd+''+count2.even}"></th> 
+		<!--odd는 홀수이면 true, even 짝수이면 true-->
+		<td th:text="${member.mid}"></td>
+		<td th:text="${member.mname}"></td>
+		<td th:text="${#dates.format(member.regdate,'yyyy년 MM월 dd일')}"></td>
+	</tr>
+	</table>
+
+</body>
+</html>

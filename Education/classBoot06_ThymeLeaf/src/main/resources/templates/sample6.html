@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+
+<table border="1" th:inline="text">
+<tr>
+	<th>회원아이디</th> <th>회원이름</th> <th>가입날짜</th>
+</tr>
+
+<tr th:each="m:${list}">
+	<th>[[${m.mid}]]</th>
+	<th>[[${m.mname}]]</th>
+	<th>[[${m.regdate}]]</th>
+</tr>
+</table>
+
+<div>[[${result}]]</div>
+<div>[[${#vars.result}]]</div> <!-- /* 표현식 기본객체에서 vars는 생략 가능함.
+									왼쪽의 2가지는 같은 표현이다.  */ -->
+
+<!-- 타임리프를 자바스크립트에서 인식할 수 있게 하기 위함.. -->
+<script type="text/javascript" th:inline="javascript">
+	var data=[[${result}]]
+	alert(data);
+</script>
+
+
+</body>
+</html>

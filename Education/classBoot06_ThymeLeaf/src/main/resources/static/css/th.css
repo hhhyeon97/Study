@@ -1,0 +1,13 @@
+@charset "UTF-8"; 
+/*th.css 파일을 만들면 webapp경로로 자동 들어감! webapp에 생성하고 static/css/안으로 옮기거나
+만들때 file로 th.css입력해서 만들기 ! */
+
+.thymeLeaf_css{
+	
+	width:300px; height:100px; border:1px solid green;
+	background-color: gray; border-radius: 15px;
+	text-align: center;	/*글자 수평 중앙 정렬*/
+	margin-left:auto; margin-right:auto; /*좌우 수평 중앙 정렬*/ 
+	margin-top: 100px;
+	box-shadow: 10px 10px 10px gray; line-height:100px;  /*글자 수직 정렬*/
+}

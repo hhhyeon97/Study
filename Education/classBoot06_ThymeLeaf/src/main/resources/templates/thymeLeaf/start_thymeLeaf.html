@@ -1,0 +1,26 @@
+<!-- 이 파일 만들 때 html선택하고 만들지 않고 file 에서 start_thymeLeaf.html 입력해서 만들기 
+	html파일 선택해서 생성하면 webapp 경로로 바로 들어가짐 !-->
+
+	
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<title>ThymeLeaf</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="./css/th.css" />
+	</head>
+
+<body>
+	<h1>ThymeLeaf 연습 페이지</h1>
+	<h2 class="thymeLeaf_css" th:text="${greeting}"></h2>
+	<!-- /* ${greeting}은 SampleController.java에서 설정한 키이름인 greeting을 참조해서 값을 가져옴*/ -->
+	<hr>
+	
+	<h3>맛난 복숭아</h3>
+	<img src="./images01/fruit01.jpg" width="200px" height="150px" alt="복숭아" />
+	
+	<h3>맛난 배</h3>
+	<img src="./images02/fruit02.jpg" width="250px" height="200px" lat="맛난배입니다." />
+	
+	
+</body>
+</html>

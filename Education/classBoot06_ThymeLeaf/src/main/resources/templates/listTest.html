@@ -1,0 +1,19 @@
+<!-- 이 파일도 file에서 listTest.html 입력해서 생성하기 !  -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>ThymeLeaf</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	
+	<h1 th:text="${cont_title}"></h1>
+	<hr>
+	
+	<ul>
+	<li th:each="data: ${list}" th:text="${data}"></li>
+	<!--/* list 키이름의 컬렉션 복수개의 목록을 data로 가져와서 출력 */--> <!--주석문안에붙여쓰면html주석문이 아닌 타임리프주석문으로처리 웹브라우저에서 페이지소스보기하면 주석처리되어 보이지 않음!-->
+	</ul>
+</body>
+</html>

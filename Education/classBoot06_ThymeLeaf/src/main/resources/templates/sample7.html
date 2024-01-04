@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+
+	<h2 th:text="${now}"></h2>
+	<h2 th:text="${#dates.format(now,'yyyy년 MM월 dd일')}"></h2>
+	
+	<div th:with="today=${#dates.createToday()}">
+				<!--/* 타임리프로 오늘날짜 today객체 생성 */-->
+	<p>[[${today}]]</p>
+	
+	</div>
+	
+	<h1 th:text="${price}"></h1>
+	<h2 th:text="${#numbers.formatInteger(price,3,'COMMA')}"></h2>
+	<!--/* 세자리 수 콤마 표현 #numbers.formatInteger(표시해야 할 값, 최소 자리수, 
+	COMMA는 구분자 ,를 의미한다. )*/-->
+	
+	<div th:with="priceValue=99.87654">
+	<p th:text="${#numbers.formatInteger(priceValue,3,'COMMA')}"></p>
+	<!--/*formatInteger는 정수 처리를 한다. 결국 반올림해서 세자리 수 정수 100으로 표현*/-->
+	<p th:text="${#numbers.formatDecimal(priceValue,5,10,'POINT')}"></p>
+	<!--/* formatDecimal(표시할 값, 최소 정수 자리수, 최소 소수자리수, POINT는 구분자 .을 의미 ) */-->
+	</div>
+	
+	<hr>
+	
+	<h1 th:text="${title}"></h1>
+	<span th:utext="${#strings.replace(title,'s','<b>s</b>')}"></span>
+	<!--/*title에 저장된 영문자에서 s를 진하게 표현*/-->
+	
+	<ul>
+	<li th:each="str:${#strings.listSplit(title,' ')}">[[${str}]]
+	<!--/* title에 있는 영문자에서 공백 문자를 기준으로 문자를 분리한다.( 문자 파싱) */-->
+	</ul>
+	<h1 th:text="${options}"></h1>
+</body>
+</html>
