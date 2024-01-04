@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Test"> <!-- Test 매퍼네임스페이스명 지정 -->
+
+<insert id="test_in" parameterType="testvo"> <!-- 파라미터 타입 생략 가능 -->
+	insert into tbl_test(test_no,test_title,test_cont,test_regdate) values(test_seq.nextval,#{test_title},#{test_cont},sysdate)
+</insert>
+
+
+<insert id="testboard_in" parameterType="testboardvo">
+	insert into tblBoard25 values(tbl_board25_seq.nextval,#{bname},#{btitle},#{bcont},0,sysdate)
+</insert>
+
+
+<select id="testboard_count" resultType="int">
+	
+
+     select count(bno) from tblBoard25	
+	
+</select>
+
+
+ <!-- 게시판 목록 -->
+    <select id="testboard_list" resultType="testboardvo">
+     select * from tblBoard25
+    </select>
+
+
+  <!-- 조회수 증가 -->
+    <update id="testboard_hit" parameterType="int">
+     update tblBoard25 set bhit=bhit+1 
+     where bno=#{bno}
+    </update>
+    
+    <!-- 내용보기 -->
+    <select id="testboard_cont" resultType="testboardvo">
+     select * from tblBoard25 where bno=#{bno}
+    </select>
+
+
+</mapper>
